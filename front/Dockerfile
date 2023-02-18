@@ -4,7 +4,7 @@ ADD ./app /opt/app
 
 WORKDIR /opt/app
 
-RUN npm install -g pm2
+# RUN npm install -g pm2
 
 RUN npm run build
 

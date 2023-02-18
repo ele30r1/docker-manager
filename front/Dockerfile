@@ -10,6 +10,6 @@ RUN npm run build
 
 EXPOSE 4000
 
-CMD ["pm2", "start"]
+# CMD ["pm2", "start"]
 
-# CMD ["npm", "start"]
+CMD ["npm", "start"]

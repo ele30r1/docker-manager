@@ -1,0 +1,20 @@
+version: "2"
+services:
+  api:
+    build: ./api
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 4001:4000
+    dns:
+      - 178.22.122.100
+      - 185.51.200.2
+  front:
+    build: ./front
+    ports:
+      - 4000:4000
+    dns:
+      - 178.22.122.100
+      - 185.51.200.2
+    depends_on:
+      - api
